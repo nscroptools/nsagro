@@ -1,0 +1,174 @@
+
+/********************************************************************************** Header section***********************************************************************/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Align left and right logos */
+    align-items: center;
+    padding: 10px 30px; /* Adjust padding for enough spacing */
+    box-sizing: border-box; /* Ensure padding is included in the header dimensions */
+    background-color: rgb(255, 255, 255); /* Transparent header */
+    z-index: 10;
+}
+
+header img {
+   /* max-height: 0;  Limit the logo height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Style for the left logo */
+header .left-logo {
+    height: 35px;
+    margin-right: auto;
+}
+
+/* Style for the right logo */
+header .right-logo {
+    margin-top: 15px;
+    height: 25px;
+    margin-left: auto;
+    margin-right: 0; /* Ensures it's not cut off */
+}
+
+/* Optional: Add a little extra padding on the right to prevent clipping */
+header .right-logo {
+    margin-right: 0px;
+}
+
+/* explore Heading Section */
+.explore-heading {
+    text-align: center; /* Center the content horizontally */
+    margin: 100px 0 0px 0; /* Adjust the top margin to account for header height */
+}
+
+/* explore Image */
+.explore-heading .explore-image {
+    max-width: 100%; /* Ensure the image scales responsively */
+    height: auto; /* Maintain aspect ratio */
+    width: 400px; /* Set a fixed width if desired */
+    margin: 0 auto; /* Center the image inside the container */
+    display: block; /* Ensure it behaves like a block element */
+}
+
+/* Optional: View All Products */
+.view-all {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.view-all a {
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+    padding:12px 40px; /* Reduced padding for smaller buttons */
+    font-size: 30px; /* Adjusted font size */
+    border-radius: 5px;
+}
+
+
+/* Grid for All Products Page */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 10px; /* Adjust for header overlap */
+}
+
+/* Grid Items */
+.grid-item {
+    background-color: #f9f9f9;
+    color: rgb(6, 38, 3);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    /* Uniform shadow on all sides */
+    box-shadow: 0 4px 8px rgba(96, 199, 27, 0.2), 
+                0 -4px 8px rgba(96, 199, 27, 0.2), 
+                4px 0 8px rgba(96, 199, 27, 0.2), 
+                -4px 0 8px rgba(96, 199, 27, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;;
+
+    /* Ensure consistent size */
+    height: 150px; /* Reduced height for all product boxes */
+    width: auto; /* Allow flexible width */
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    justify-content: space-between; /* Space out children vertically */
+    overflow: hidden; /* Hide overflow if needed */
+}
+
+/* Restrict Image Size */
+.grid-item img {
+    max-width: 100%;
+    height: 60px; /* Reduced fixed height for images */
+    object-fit: contain; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+/* Ensure Product Title and Price Alignment */
+.grid-item h3 {
+    margin: 5px 0; /* Adjust spacing */
+    font-size: 12px; /* Reduced font size */
+    line-height: 1.2; /* Tighter line height */
+    flex-shrink: 0; /* Prevent collapsing */
+}
+
+/* Buttons at the Bottom */
+.add-to-cart {
+    display: inline-block;
+    margin-top: auto; /* Push button to the bottom */
+    padding: 5px 10px; /* Reduced padding for a smaller button */
+    font-size: 12px; /* Reduced font size */
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the button when it becomes "Go to Cart" */
+.add-to-cart.go-to-cart {
+    background-color: #007BFF;
+    color: white;
+}
+.add-to-cart.go-to-cart:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Adjust Grid to Maintain Consistency */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust to match smaller items */
+    gap: 15px; /* Reduce spacing between items */
+    padding: 10px; /* Smaller padding */
+    margin-top: 50px; /* Adjust top margin for header */
+}
+/* Animation for page entrance */
+.page-animate {
+    animation: pageLoad 0.1s ease-in; /* Adjust duration and effect as needed */
+}
+
+/* Keyframes for fade and slight slide-up effect */
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Move slightly up */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

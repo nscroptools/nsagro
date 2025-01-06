@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - NS AGRO AGENCY</title>
+    <link rel="icon" type="image/x-icon" href="images/Main/cart.png">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<!-- Header Section (same as products) -->
+<header>
+    <a href="index.html">
+        <img src="images/Logo-Green/agro.png" alt="NS AGRO AGENCY Logo" class="left-logo">
+    </a>
+    <img src="images/Logo-Green/nbr.png" alt="Other Logo" class="right-logo">
+</header>
+
+<!-- cart Logo -->
+<div class="cart-heading">
+    <img src="images/Logo-Green/cart.png" alt="cart Design" class="cart-image">
+</div>
+
+<div class="cart-items">
+    <!-- Dynamically generated cart items will appear here -->
+</div>
+
+<div class="total">
+    <h3>Total: ₹<span id="total-price">0</span></h3>
+</div>
+
+<!-- Checkout Button -->
+<a href="#" id="checkout-btn" class="checkout-btn">Buy Now</a>
+
+<script src="cart.js"></script>
+<script>
+    // Add animation class to body when the page is loaded
+    window.addEventListener('load', () => {
+        document.body.classList.add('page-animate');
+    });
+</script>
+</body>
+</html>

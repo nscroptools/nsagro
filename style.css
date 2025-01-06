@@ -1,0 +1,449 @@
+/******************************************************************************* Body page*******************************************************************************/
+body {
+    background-color: rgb(255, 255, 255);  /* Matches your theme */
+    margin: 0;  /* Removes any default margins from the body */
+    font-family: 'Roboto', sans-serif; /* Use Roboto for the font */    color: white;  /* Optional: ensures text is readable on dark background */
+}
+
+/* Optional: Styling for links (if needed to make them visible) */
+a {
+    color: white;  /* Set link color to white to contrast with dark background */
+    text-decoration: none;  /* Optional: remove underline */
+}
+
+a:hover {
+    text-decoration: underline;  /* Optional: show underline on hover */
+}
+/********************************************************************************** Header section***********************************************************************/
+
+/* Header Section */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between; /* Align left and right logos */
+    align-items: center;
+    padding: 10px 30px; /* Adjust padding for enough spacing */
+    box-sizing: border-box; /* Ensure padding is included in the header dimensions */
+    background-color: rgb(255, 255, 255); /* Transparent header */
+    z-index: 10;
+}
+
+header img {
+   /* max-height: 0;  Limit the logo height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Style for the left logo */
+header .left-logo {
+    height: 35px;
+    margin-right: auto;
+}
+
+/* Style for the right logo */
+header .right-logo {
+    margin-top: 15px;
+    height: 28px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-right: 0; /* Ensures it's not cut off */
+}
+
+/* Optional: Add a little extra padding on the right to prevent clipping */
+header .right-logo {
+    margin-right: 0px;
+}
+
+
+
+/******************************************************************************************* Home Page*******************************************************************/
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Background video, keep elements above */
+}
+
+
+.hero-text {
+    font-family: 'Dancing Script', cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero-text .hero-logo {
+    max-width: 400px; /* Adjust the image width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 0px; /* Optional: space below the image */
+}
+
+.hero-text p {
+    font-size: 40px;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Scroll Container */
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Space between Agriculture Machinery and scroll section */
+}
+
+/* Scroll Text Style */
+.scroll-container .scroll-text {
+    font-size: 30px; /* Smaller font size for the scroll text */
+    font-style: normal; /* Make it normal (non-italic) */
+    margin-bottom: 5px; /* Space between text and symbol */
+}
+
+/* Scroll Symbol Style */
+.scroll-container .scroll-symbol {
+    font-size: 24px; /* Symbol size */
+    animation: bounce 1.5s infinite; /* Optional animation for the symbol */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+/* Designs Container */
+.designs-container {
+    display: flex;
+    flex-direction: column; /* Stack designs vertically */
+    align-items: center; /* Center designs horizontally */
+    gap: 10px; /* Space between designs */
+    margin-top: 20px; /* Space below the scroll symbol */
+}
+
+.design {
+    width: 100px; /* Set a fixed width for the designs (adjust as needed) */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Rounded corners for designs */
+    /* box-shadow: 0 4px 8px rgba(255, 255, 255, 0); Optional: Shadow for better visibility */
+}
+.design:last-child { 
+    width: 170px; /* Larger width for the third design */
+    
+}
+
+
+/*************************************************************************************** Discover Page*******************************************************************/
+
+/* Discover Our Range Heading */
+.discover-heading {
+    width: 100%; /* Spans the full width of the page */
+    background-color: rgb(255, 255, 255); /* Solid green background */
+    padding: 20px 0; /* Maintains consistent height */
+    margin: 0; /* No extra margins around the section */
+    text-align: center; /* Centers the content */
+}
+
+.discover-heading .discover-image {
+    max-width: 50%; /* Scales the image proportionally within the container */
+    height: auto; /* Maintains aspect ratio */
+    display: inline-block; /* Ensures proper alignment */
+}
+
+
+/* Full-page Video Section */
+.product-video {
+    position: relative;
+    width: calc(100% - 40px);  /* Add space on the sides */
+    height: 40vh; /* Each video will fill 40% of the viewport height */
+    overflow: hidden;
+    margin-bottom: 20px; /* Adds space between each video */
+    margin-left: auto;
+    margin-right: auto; /* Centers the video */
+    border-radius: 10px; /* Rounds the corners */
+    margin-top: 0px;  /* Adds space above the first video */
+}
+
+/* Space for the video itself */
+.product-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Keeps the video in the background */
+}
+
+/* Optional: if you want the overlay image to respect the border-radius */
+.video-overlay {
+    border-radius: 20px;  /* Ensures the overlay fits with the rounded corners */
+}
+
+
+/* PNG Design Overlay - Default */
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 45%; /* Default size for most designs */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Specific Style for Long PNG Overlay */
+.video-overlay.long {
+    width: 65%; /* Increase width specifically for long PNGs */
+}
+
+
+
+/******************************************************************************** Expolre Our Catlog Page****************************************************************/
+
+/* Explore Heading */
+.inventory-heading {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.inventory-image {
+    max-width: 50%; /* Makes sure the image fits within the container */
+    height: auto; /* Maintain the aspect ratio */
+    display: inline-block; /* Keeps the image aligned properly */
+}
+
+
+/* Product and Services - Grid */
+.grid {
+    padding: 20px; /* Reduced padding for smaller containers */
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted for smaller items */
+    gap: 15px; /* Slightly reduced gap between items */
+    justify-content: center;
+}
+
+.grid-item {
+    text-align: center;
+    padding: 8px; /* Reduced padding */
+    background-color: #ffffff;
+    border-radius: 8px;
+    /* Uniform shadow on all sides */
+    box-shadow: 0 4px 8px rgba(96, 199, 27, 0.2), 
+                0 -4px 8px rgba(96, 199, 27, 0.2), 
+                4px 0 8px rgba(96, 199, 27, 0.2), 
+                -4px 0 8px rgba(96, 199, 27, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;;
+    position: relative;
+    height: 150px; /* Fixed size for uniform grid-items */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Image inside the grid-item */
+.grid-item img {
+    max-width: 100%;
+    height: 60px; /* Reduced fixed height for images */
+    object-fit: contain; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+/* Text inside the grid-item */
+.grid-item h3 {
+    margin: 5px 0;
+    font-size: 12px; /* Adjusted font size */
+    color: #25372a;
+    line-height: 1.2; /* Compact spacing */
+}
+
+/* Price styling */
+.grid-item .price {
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+/* Buttons at the Bottom */
+.add-to-cart {
+    display: inline-block;
+    margin-top: auto; /* Push button to the bottom */
+    padding: 5px 10px; /* Reduced padding for a smaller button */
+    font-size: 12px; /* Reduced font size */
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the button when it becomes "Go to Cart" */
+.add-to-cart.go-to-cart {
+    background-color: #007BFF;
+    color: white;
+}
+.add-to-cart.go-to-cart:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: View All Products */
+.view-all {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.view-all a {
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 8px 15px; /* Reduced padding for smaller buttons */
+    font-size: 12px; /* Adjusted font size */
+    border-radius: 5px;
+}
+
+/************************************************************************************ Services Page******************************************************************************/
+/* Services Section */
+#services {
+    width: 100%;
+    text-align: center;
+}
+
+/* Service Heading Section */
+.service-heading-container {
+    margin-bottom: 30px; /* Adds spacing between heading and video */
+}
+
+.service-heading {
+    width: 80%; /* Adjust width as needed for your logo */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for logo */
+}
+
+/* Full-page Video Section */
+.video-s {
+    position: relative;
+    width: calc(100% - 40px);  /* Add space on the sides */
+    height: 60vh; /* Each video will fill 40% of the viewport height */
+    overflow: hidden;
+    margin-bottom: 20px; /* Adds space between each video */
+    margin-left: auto;
+    margin-right: auto; /* Centers the video */
+    border-radius: 10px; /* Rounds the corners */
+    margin-top: 0px;  /* Adds space above the first video */
+}
+
+/* Space for the video itself */
+.video-s video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Keeps the video in the background */
+}
+
+/* Optional: if you want the overlay image to respect the border-radius */
+.video-overlay1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 65%; /* Default size for most designs */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/*************************************************************************************** Contact Us Page*************************************************************************/
+.contact-section {
+    text-align: center;
+    color: #25372a;
+    padding: 20px;
+    background-color: rgb(255, 255, 255)
+}
+
+.contact-section button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #00ff2f;
+}
+
+/* About Us Page */
+.Address-section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Add rectangular box with a tint effect */
+.address-container {
+    background-color: #25372a; /* Semi-transparent tint */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for the tint box */
+    display: inline-block; /* Keep content aligned and don't span full width */
+}
+
+/* Style iframe */
+.Address-section iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Links style */
+.Address-section a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Animation for page entrance */
+.page-animate {
+    animation: pageLoad 0.1s ease-in; /* Adjust duration and effect as needed */
+}
+
+/* Keyframes for fade and slight slide-up effect */
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Move slightly up */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

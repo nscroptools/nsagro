@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - NS AGRO AGENCY</title>
+    <link rel="icon" type="image/x-icon" href="images/Main/pbox.png">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <a href="index.html">
+        <img src="images/Logo-Green/agro.png" alt="NS AGRO AGENCY Logo" class="left-logo">
+    </a>
+    <img src="images/Logo-Green/nbr.png" alt="Other Logo" class="right-logo">
+</header>
+
+<!-- Explore Logo -->
+<div class="explore-heading">
+    <img src="images/Logo-Green/explore.png" alt="Explore Design" class="explore-image">
+</div>
+
+<div class="view-all">
+    <a>Products</a>
+</div>
+
+<!-- Products Section -->
+<section id="all-products">
+    <div class="grid">
+        <div class="grid-item">
+            <img src="images/Products/drone.png" alt="Product 1">
+            <h3>Agriculture Drone</h3>
+            <h3>₹5,00,000</h3>
+            <a href="#" class="add-to-cart" data-product-name="Agriculture Drone" data-product-price="500000">Add to Cart</a>
+        </div>
+        <div class="grid-item">
+            <img src="images/Products/ratavator.png" alt="Product 2">
+            <h3>Rotavator</h3>
+            <h3>₹45,000</h3>
+            <a href="#" class="add-to-cart" data-product-name="Rotavator" data-product-price="45000">Add to Cart</a>
+        </div>
+        <div class="grid-item">
+            <img src="images/Products/jsbaler.png" alt="Product 3">
+            <h3>Bharath Baler</h3>
+            <h3>₹3,10,000</h3>
+            <a href="#" class="add-to-cart" data-product-name="Bharath Baler" data-product-price="310000">Add to Cart</a>
+        </div>
+        <div class="grid-item">
+            <img src="images/Products/pump.png" alt="Product 4">
+            <h3>1HP Natraj Pump</h3>
+            <h3>₹10,000</h3>
+            <a href="#" class="add-to-cart" data-product-name="1HP Natraj Pump" data-product-price="10000">Add to Cart</a>
+        </div>
+        <div class="grid-item">
+            <img src="images/Products/drum.png" alt="Product 5">
+            <h3>Drum</h3>
+            <h3>₹7,00,000</h3>
+            <a href="#" class="add-to-cart" data-product-name="Drum" data-product-price="700000">Add to Cart</a>
+        </div>
+        <div class="grid-item">
+            <img src="images/Products/jute twine.png" alt="Product 6">
+            <h3>Jute twine</h3>
+            <h3>₹90/kg</h3>
+            <a href="#" class="add-to-cart" data-product-name="Jute twine" data-product-price="1200000">Add to Cart</a>
+        </div>
+    </div>
+
+    <div class="view-all">
+        <a href="#">Spare Parts</a>
+    </div>
+
+    <!-- Spare Parts Section -->
+    <section id="spare-parts">
+        <div class="grid">
+            <div class="grid-item">
+                <img src="images/Products/spare parts/baler roller.png" alt="baler roller">
+                <h3>baler roller</h3>
+                <h3>₹3,000</h3>
+                <a href="#" class="add-to-cart" data-product-name="baler roller" data-product-price="50000">Add to Cart</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/Products/spare parts/Tapered Roller Bearing Cone.png" alt="Spare Part 2">
+                <h3>Tapered Roller Bearing Cone</h3>
+                <h3>₹500</h3>
+                <a href="#" class="add-to-cart" data-product-name="Tapered Roller Bearing Cone" data-product-price="500">Add to Cart</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/Products/spare parts/drone battery 21000 mah.png" alt="Spare Part 3">
+                <h3>Drone battery 21000 mah</h3>
+                <h3>₹22,000</h3>
+                <a href="#" class="add-to-cart" data-product-name="Drone battery 21000 mah" data-product-price="22000">Add to Cart</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/Products/spare parts/spring.png" alt="Spare Part 4">
+                <h3>Spring</h3>
+                <h3>₹55</h3>
+                <a href="#" class="add-to-cart" data-product-name="Spring" data-product-price="55">Add to Cart</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/Products/spare parts/gear shaft.png" alt="Spare Part 5">
+                <h3>Gear Shaft</h3>
+                <h3>₹2,000</h3>
+                <a href="#" class="add-to-cart" data-product-name="Gear Shaft" data-product-price="2000">Add to Cart</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/Products/spare parts/Gear Box.png" alt="Spare Part 6">
+                <h3>Gear Box</h3>
+                <h3>₹35,000</h3>
+                <a href="#" class="add-to-cart" data-product-name="Gear Box" data-product-price="35000">Add to Cart</a>
+            </div>
+            <!-- Add similar Add-to-Cart links for the remaining spare parts -->
+        </div>
+
+        <div class="view-all">
+            <a href="cart.html">Go to Cart</a>
+        </div>
+    </section>
+</section>
+
+<script src="cart.js"></script>
+<script>
+    // Add animation class to body when the page is loaded
+    window.addEventListener('load', () => {
+        document.body.classList.add('page-animate');
+    });
+</script>
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Select all "Add to Cart" buttons
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+        // Check local storage to restore button state if already added to cart
+        addToCartButtons.forEach(button => {
+            const productName = button.getAttribute("data-product-name");
+            if (localStorage.getItem(productName) === "added") {
+                button.textContent = "Go to Cart";
+                button.classList.add("go-to-cart");
+                button.href = "cart.html";
+            }
+
+            // Add event listener for button click
+            button.addEventListener("click", event => {
+                event.preventDefault();
+                if (button.classList.contains("go-to-cart")) {
+                    // Redirect to cart.html
+                    window.location.href = "cart.html";
+                } else {
+                    // Change the button to "Go to Cart"
+                    button.textContent = "Go to Cart";
+                    button.classList.add("go-to-cart");
+                    button.href = "cart.html";
+
+                    // Save cart status in local storage
+                    localStorage.setItem(productName, "added");
+                }
+            });
+        });
+    });
+</script> -->
+
+
+</body>
+</html>
